@@ -30,10 +30,6 @@ public class User {
     private String displayName;
 
     @NonNull
-    @Column(name = "region")
-    private String region;
-
-    @NonNull
     @Column(name = "password")
     private String password;
 

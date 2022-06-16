@@ -1,6 +1,6 @@
 package com.libby.xebru.security;
 
-import com.libby.xebru.database.entity.User;
+import com.libby.xebru.database.dao.UserRoleDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +12,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
+import com.libby.xebru.database.entity.User;
+import com.libby.xebru.database.entity.UserRole;
+import com.libby.xebru.database.dao.UserDAO;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -71,6 +74,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
 
         return userDao.findByEmail(auth.getName());
+
 
     }
 }
